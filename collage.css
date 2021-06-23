@@ -1,0 +1,215 @@
+* {
+    background-size: border-box;
+    background-color: #e6e6ff;
+}
+
+ :root {
+    --minmax: minmax(50px, auto);
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 'a a c c c i d d e e' 'a a c c c i d d e e' 'b g c c c i l l j n' 'b g h h h k k k m m' 'f f h h h k k k m m';
+    grid-gap: 5px;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Garamond', serif;
+}
+
+.container>div {
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.a-box,
+.b-box,
+.c-box,
+.e-box,
+.f-box,
+.h-box,
+.i-box,
+.j-box,
+.k-box,
+.l-box,
+.m-box,
+.n-box {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.a-box {
+    grid-area: a;
+    display: grid;
+    background-image: url(https://yt3.ggpht.com/ytc/AAUvwnhFRzdkdacnJGH2S6r3F_WPQDSf3VyvHwqs0yutGA=s900-c-k-c0x00ffffff-no-rj);
+    grid-template-rows: repeat(5, var(--minmax));
+}
+
+.b-box {
+    grid-area: b;
+    grid-template-rows: repeat(5, var(--minmax));
+    display: grid;
+    background-image: url(https://images.unsplash.com/photo-1509281373149-e957c6296406?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dmludGFnZXxlbnwwfHwwfA%3D%3D&w=1000&q=80);
+}
+
+.c-box {
+    grid-area: c;
+    background-image: url(https://i.pinimg.com/236x/33/00/27/33002755d12fa91313039e55fac467ca--vintage-roses-vintage-girls.jpg);
+}
+
+.d-box {
+    grid-area: d;
+    padding-top: 60px;
+    background-color: #ffff4d;
+}
+
+.e-box {
+    grid-area: e;
+    background-image: url(https://cdn.shopify.com/s/files/1/0005/1435/9356/files/Winston_Reflection_LittleVintagePhotography_1024x1024.jpg?v=1544096528);
+}
+
+.f-box {
+    grid-area: f;
+    grid-template-rows: repeat(2, var(--minmax));
+    display: grid;
+    background-image: url(https://www.adobe.com/content/dam/cc/us/en/creativecloud/design/discover/colorize-black-and-white-photos/desktop/colorize_black_and_white_photos_P1_900x420.jpg.img.jpg);
+}
+
+.g-box {
+    grid-area: g;
+    padding-top: 60px;
+    background-color: #d2a679;
+}
+
+.h-box {
+    grid-area: h;
+    background-image: url(https://images.pexels.com/photos/1626481/pexels-photo-1626481.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+}
+
+.i-box {
+    grid-area: i;
+    background-image: url(https://static.bimago.com/mediacache/catalog/product/cache/2/9/128392/small_image/500x500/fc7a713906626c508f45ecd932148f43/128392_1.jpg);
+}
+
+.j-box {
+    grid-area: j;
+    background-image: url(https://images.squarespace-cdn.com/content/v1/58ceb08ab3db2b938eb48514/1502250201511-2EJJXYZUTRDKUWW2S4FV/ke17ZwdGBToddI8pDm48kDOCJQeDVC1vfUheea6OvWp7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UfwDX2Z-brsLF41-1gys0gEZt8twBv4_EkXVQE3ZYfYwjIjg7l_3EkjvTQ6EpWDFFA/LOGO+for+web.jpg?format=1000w);
+}
+
+.k-box {
+    grid-area: k;
+    background-image: url(https://cdn.shopify.com/s/files/1/0137/8831/5705/products/Beatles-1-Pc-Mockup-Zoomed.jpg?v=1600375742);
+}
+
+.l-box {
+    grid-area: l;
+    grid-template-rows: repeat(2, var(--minmax));
+    display: grid;
+    background-image: url(https://s29938.pcdn.co/wp-content/uploads/2019/09/Vintage-Removable-Wallpapers.jpg.optimal.jpg);
+}
+
+.m-box {
+    grid-area: m;
+    background-image: url(https://webneel.com/daily/sites/default/files/images/project/Retro%20effect%20-%20car%20-%20Photography%20-%20by%20gnato.jpg);
+}
+
+.n-box {
+    grid-area: n;
+    background-image: url(https://media.winefolly.com/Wine-Vintage-Winefolly.jpg);
+}
+
+@media screen and (min-width:0px) and (max-width:500px) {
+    .container {
+        display: grid;
+        grid-template-areas: 'a a n n b' 'a a n n b' 'f f f f b' 'g g g j j' 'g g g l l' 'm m k k k' 'd d c c c' 'd d i i i' 'h h h e e' 'h h h e e';
+        grid-gap: 2px;
+        color: black;
+        background-color: #e6e6ff;
+        font-family: 'Garamond', serif;
+    }
+    .container>div {
+        display: grid;
+    }
+    .b-box,
+    .j-box,
+    .l-box,
+    .n-box {
+        grid-template-rows: repeat(1, var(--minmax));
+    }
+    .e-box,
+    .h-box,
+    .a-box {
+        grid-template-rows: repeat(3, var(--minmax));
+    }
+    .c-box,
+    .d-box,
+    .i-box,
+    .f-box {
+        grid-template-rows: repeat(2, var(--minmax));
+    }
+    .k-box,
+    .m-box {
+        grid-template-rows: repeat(4, var(--minmax));
+    }
+    .b-box,
+    .n-box {
+        grid-template-columns: repeat(1, var(--minmax));
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:1000px) {
+    .container {
+        display: grid;
+        grid-gap: 3px;
+        grid-template-areas: 'a a b b i c' 'a a j j i c' 'd d e e m m' 'd d e e m m' 'g g g n m m' 'k k k n l l' 'k k k h h h' 'f f f h h h';
+        color: black;
+        background-color: #e6e6ff;
+        font-family: 'Garamond', serif;
+        font-size: 30px;
+    }
+    .container>div {
+        display: grid;
+    }
+    .c-box {
+        grid-template-rows: repeat(1, var(--minmax));
+        grid-template-columns: repeat(2, var(--minmax));
+    }
+    .h-box,
+    .k-box {
+        grid-template-rows: repeat(2, var(--minmax));
+    }
+    .a-box,
+    .a-box,
+    .f-box,
+    .l-box,
+    .j-box {
+        grid-template-rows: repeat(3, var(--minmax));
+    }
+    .e-box,
+    .i-box,
+    .m-box {
+        grid-template-rows: repeat(4, var(--minmax));
+    }
+    .b-box {
+        grid-template-rows: repeat(5, var(--minmax));
+        grid-template-columns: repeat(2, var(--minmax));
+    }
+    .n-box {
+        grid-template-columns: repeat(1, var(--minmax));
+        grid-template-rows: repeat(1, var(--minmax));
+    }
+    .h-box,
+    .i-box {
+        grid-template-columns: repeat(2, var(--minmax));
+    }
+    .d-box {
+        grid-template-columns: repeat(2, var(--minmax));
+        grid-template-rows: repeat(0, var(--minmax));
+    }
+    .g-box {
+        text-align: center;
+        grid-template-columns: repeat(3, var(--minmax));
+        grid-template-rows: repeat(4, var(--minmax));
+    }
+}
